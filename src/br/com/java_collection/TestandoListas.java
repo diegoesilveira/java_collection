@@ -1,6 +1,7 @@
 package br.com.java_collection;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class TestandoListas {
 
@@ -8,11 +9,15 @@ public class TestandoListas {
         String lista1 = "Brincando com listas";
         String lista2 = "Modelando listas";
         String lista3 = "Trabalhando com Sets";
+        String lista4 = "Aumentando conhecimento";
+        String lista5 = "Conhecendo ArrayList";
 
         ArrayList<String> aulas = new ArrayList<>();
         aulas.add(lista1);
         aulas.add(lista2);
         aulas.add(lista3);
+        aulas.add(lista4);
+        aulas.add(lista5);
 
         System.out.println(aulas);
         aulas.remove(0);
@@ -30,5 +35,11 @@ public class TestandoListas {
         aulas.forEach(aula -> {
             System.out.println("Percorrendo: " +aula);
         });
+
+        System.out.println("------------------------------------------------");
+        Collections.sort(aulas);
+        System.out.println(aulas);
+
+
     }
 }
