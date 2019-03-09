@@ -1,2 +1,4 @@
 # java_collection
-Java 8 collection
+
+Alguns exemplos de utilização da Collection no Java.
+
