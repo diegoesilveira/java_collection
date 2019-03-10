@@ -17,4 +17,12 @@ public class Aluno {
     public int getNumeroMatricula() {
         return numeroMatricula;
     }
+
+    @Override
+    public String toString() {
+        return "Aluno { " +
+                "Nome= '" + nome + '\'' +
+                ", Numero Matricula= " + numeroMatricula +
+                '}';
+    }
 }
