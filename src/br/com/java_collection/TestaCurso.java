@@ -1,6 +1,6 @@
 package br.com.java_collection;
 
-import java.util.List;
+import java.util.*;
 
 public class TestaCurso {
 
@@ -17,6 +17,8 @@ public class TestaCurso {
         System.out.println("----------------------------------");
 
         javaColecoes.adiciona(new Aula("Trabalhando com ArraysList", 40));
+
+
 
 
 
