@@ -1,14 +1,13 @@
 package br.com.java_collection;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Curso {
 
     private String nome;
     private String instrutor;
     private List<Aula> aulas = new ArrayList<>();
+    private Set<Aluno> alunos = new HashSet<>();
 
     public Curso(String nome, String instrutor) {
         this.nome = nome;
@@ -35,12 +34,20 @@ public class Curso {
         return this.aulas.stream().mapToInt(Aula::getTempo).sum();
     }
 
+    public void matricula(Aluno aluno){
+        this.alunos.add(aluno);
+    }
+
+    public Set<Aluno> getAlunos() {
+        return Collections.unmodifiableSet(alunos);
+    }
+
     @Override
     public String toString() {
-        return "Curso{" +
-                "nome='" + nome + '\'' +
-                ", instrutor='" + instrutor + '\'' +
-                ", aulas=" + aulas +
+        return "Curso: {" +
+                "nome= '" + nome + '\'' +
+                ", instrutor= '" + instrutor + '\'' +
+                ", aulas= " + aulas +
                 '}';
     }
 }
