@@ -32,6 +32,7 @@ public class TestaAlunos {
 
         System.out.println("--------------------------------------------");
 
+        System.out.println("O aluno está matriculado? " +javaColecoes.estaMatriculado(a1));
 
 //        System.out.println(alunos.size());
 //        System.out.println("-------------------------------------");
