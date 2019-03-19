@@ -1,5 +1,8 @@
 package br.com.java_collection;
 
+import java.util.Iterator;
+import java.util.Set;
+
 public class TestaCursoComAluno {
 
     public static void main(String[] args) {
@@ -21,10 +24,18 @@ public class TestaCursoComAluno {
         javaColecoes.matricula(a5);
         javaColecoes.matricula(a6);
 
-        System.out.println("Alunos Matriculados: ");
-        javaColecoes.getAlunos().forEach(a -> {
-            System.out.println(a);
-        });
+        Set<Aluno> alunos = javaColecoes.getAlunos();
+        Iterator<Aluno> iterador = alunos.iterator();
+        while(iterador.hasNext()){
+            Aluno proximo = iterador.next();
+            System.out.println(proximo);
+        }
+        System.out.println("--------------------------------------------------");
+
+//        System.out.println("Alunos Matriculados: ");//        javaColecoes.getAlunos().forEach(a -> {
+//            System.out.println(a);
+//        });
+
 
         Aluno diego = new Aluno("Diego Silveira" , 789613);
         System.out.println("a1 equals diego");
