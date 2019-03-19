@@ -4,10 +4,11 @@ import java.util.*;
 
 public class Curso {
 
+
     private String nome;
     private String instrutor;
     private List<Aula> aulas = new ArrayList<>();
-    private Set<Aluno> alunos = new HashSet<>();
+    private Set<Aluno> alunos = new TreeSet<>();
 
     public Curso(String nome, String instrutor) {
         this.nome = nome;
@@ -41,6 +42,11 @@ public class Curso {
     public Set<Aluno> getAlunos() {
         return Collections.unmodifiableSet(alunos);
     }
+
+    public boolean estaMatriculado(Aluno a1){
+        return this.alunos.contains(a1);
+    }
+
 
     @Override
     public String toString() {
