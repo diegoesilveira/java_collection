@@ -17,7 +17,9 @@ Alguns exemplos de utilização da Collection no Java.
                - Vector
                
  (Não faz parte da Collection)
- -Map
+
+-Map
+
         (chave - valor)
          -HashMap
          -Hashtablet
